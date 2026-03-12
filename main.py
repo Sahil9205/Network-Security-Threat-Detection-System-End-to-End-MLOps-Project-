@@ -3,6 +3,7 @@ from networksecurity.logging.logger import logging
 from networksecurity.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig
 from networksecurity.entity.config_entity import TrainingPipelineConfig
 from networksecurity.componets.data_ingestion import DataIngestion
+from networksecurity.componets.data_validation import DataValidation
 
 from networksecurity.entity.config_entity import ModelTrainerConfig
  
@@ -17,6 +18,7 @@ if __name__=='__main__':
         logging.info("Initiate the data ingestion")
         dataingestionartifact=data_ingestion.initiate_data_ingestion()
         logging.info("Data Initiation Completed")
+        DataValidation()
         print(dataingestionartifact)
         
         
